@@ -1,0 +1,15 @@
+# Composer / PHP
+vendor/
+web/core/
+web/modules/contrib/
+web/themes/contrib/
+
+# Node.js (eğer JS kullanırsan)
+node_modules/
+
+# Drupal caches, config dosyaları
+.env
+.phpunit.result.cache
+
+# DDEV global şeyler
+.ddev/.global_commands
