@@ -1,0 +1,24 @@
+event_registration_participants:
+  table:
+    group: 'Event Registration'
+    base:
+      field: id
+      title: 'Participants'
+      help: 'Stores participant registration data.'
+  field:
+    id:
+      title: 'ID'
+    first_name:
+      title: 'First Name'
+    last_name:
+      title: 'Last Name'
+    phone:
+      title: 'Phone Number'
+    email:
+      title: 'Email Address'
+    birth_date:
+      title: 'Birth Date'
+    subscribe:
+      title: 'Subscribed to Newsletter'
+    status:
+      title: 'Participation Status'

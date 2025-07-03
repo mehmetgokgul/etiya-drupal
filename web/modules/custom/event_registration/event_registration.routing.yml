@@ -1,0 +1,23 @@
+event_registration.list:
+  path: '/admin/config/event-registration/list'
+  defaults:
+    _controller: '\Drupal\event_registration\Controller\EventRegistrationListController::list'
+    _title: 'Event Registrations'
+  requirements:
+    _permission: 'administer site configuration'
+
+event_registration.edit:
+  path: '/admin/config/event-registration/edit/{id}'
+  defaults:
+    _form: '\Drupal\event_registration\Form\EventRegistrationEditForm'
+    _title: 'Edit Participant Status'
+  requirements:
+    _permission: 'administer site configuration'
+
+event_registration.form:
+  path: '/event-registration'
+  defaults:
+    _form: '\Drupal\event_registration\Form\EventRegistrationForm'
+    _title: 'Event Registration'
+  requirements:
+    _permission: 'access content'
