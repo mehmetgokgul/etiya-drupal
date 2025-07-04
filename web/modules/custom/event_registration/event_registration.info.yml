@@ -1,0 +1,8 @@
+name: 'Event Registration'
+type: module
+description: 'A simple event registration form.'
+core_version_requirement: '>=10.0'
+package: Custom
+dependencies:
+  - drupal:views
+  - drupal:jsonapi

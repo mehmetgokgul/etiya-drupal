@@ -1,0 +1,441 @@
+array(9) {
+  ["table"]=>
+  array(3) {
+    ["group"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7827 (5) {
+      ["string":protected]=>
+      string(18) "Event Registration"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["base"]=>
+    array(3) {
+      ["field"]=>
+      string(2) "id"
+      ["title"]=>
+      object(Drupal\Core\StringTranslation\TranslatableMarkup)#7828 (5) {
+        ["string":protected]=>
+        string(12) "Participants"
+        ["arguments":protected]=>
+        array(0) {
+        }
+        ["translatedMarkup":protected]=>
+        NULL
+        ["options":protected]=>
+        array(0) {
+        }
+        ["stringTranslation":protected]=>
+        NULL
+      }
+      ["help"]=>
+      object(Drupal\Core\StringTranslation\TranslatableMarkup)#7829 (5) {
+        ["string":protected]=>
+        string(37) "Stores participant registration data."
+        ["arguments":protected]=>
+        array(0) {
+        }
+        ["translatedMarkup":protected]=>
+        NULL
+        ["options":protected]=>
+        array(0) {
+        }
+        ["stringTranslation":protected]=>
+        NULL
+      }
+    }
+    ["provider"]=>
+    string(18) "event_registration"
+  }
+  ["id"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7830 (5) {
+      ["string":protected]=>
+      string(2) "ID"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7831 (5) {
+      ["string":protected]=>
+      string(13) "The ID field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["first_name"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7832 (5) {
+      ["string":protected]=>
+      string(10) "First Name"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7833 (5) {
+      ["string":protected]=>
+      string(21) "The First Name field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["last_name"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7834 (5) {
+      ["string":protected]=>
+      string(9) "Last Name"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7835 (5) {
+      ["string":protected]=>
+      string(20) "The Last Name field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["phone"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7836 (5) {
+      ["string":protected]=>
+      string(12) "Phone Number"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7837 (5) {
+      ["string":protected]=>
+      string(23) "The Phone Number field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["email"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7838 (5) {
+      ["string":protected]=>
+      string(13) "Email Address"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7839 (5) {
+      ["string":protected]=>
+      string(24) "The Email Address field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["birth_date"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7840 (5) {
+      ["string":protected]=>
+      string(10) "Birth Date"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7841 (5) {
+      ["string":protected]=>
+      string(21) "The Birth Date field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["subscribe"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7842 (5) {
+      ["string":protected]=>
+      string(24) "Subscribed to Newsletter"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7843 (5) {
+      ["string":protected]=>
+      string(35) "The Subscribed to Newsletter field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+  ["status"]=>
+  array(5) {
+    ["title"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7844 (5) {
+      ["string":protected]=>
+      string(20) "Participation Status"
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["help"]=>
+    object(Drupal\Core\StringTranslation\TranslatableMarkup)#7845 (5) {
+      ["string":protected]=>
+      string(31) "The Participation Status field."
+      ["arguments":protected]=>
+      array(0) {
+      }
+      ["translatedMarkup":protected]=>
+      NULL
+      ["options":protected]=>
+      array(0) {
+      }
+      ["stringTranslation":protected]=>
+      NULL
+    }
+    ["field"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["filter"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+    ["sort"]=>
+    array(1) {
+      ["id"]=>
+      string(8) "standard"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function event_registration_schema() {
+  $schema['event_registration_participants'] = [
+    'description' => 'Stores event participant registration data.',
+    'fields' => [
+      'id' => [
+        'description' => 'Unique participant ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'first_name' => [
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+      ],
+      'last_name' => [
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+      ],
+      'phone' => [
+        'type' => 'varchar',
+        'length' => 11,
+        'not null' => TRUE,
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+      ],
+      'birth_date' => [
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+      ],
+      'subscribe' => [
+        'description' => 'Newsletter subscription status (0 or 1).',
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'status' => [
+        'description' => 'Participation status (active/inactive).',
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

@@ -1,0 +1,43 @@
+<?php
+
+function event_registration_views_data() {
+  $data = [];
+
+  $data['event_registration_participants']['table'] = [
+    'group' => t('Event Registration'),
+    'base' => [
+      'field' => 'id',
+      'title' => t('Participants'),
+      'help' => t('Stores participant registration data.'),
+    ],
+  ];
+
+  $fields = [
+    'id' => 'ID',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'phone' => 'Phone Number',
+    'email' => 'Email Address',
+    'birth_date' => 'Birth Date',
+    'subscribe' => 'Subscribed to Newsletter',
+    'status' => 'Participation Status',
+  ];
+
+  foreach ($fields as $field_name => $field_label) {
+    $data['event_registration_participants'][$field_name] = [
+      'title' => t($field_label),
+      'help' => t("The $field_label field."),
+      'field' => [
+        'id' => 'standard',
+      ],
+      'filter' => [
+        'id' => 'standard',
+      ],
+      'sort' => [
+        'id' => 'standard',
+      ],
+    ];
+  }
+
+  return $data;
+}
