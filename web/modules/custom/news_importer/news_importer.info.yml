@@ -1,0 +1,8 @@
+
+name: 'News Importer'
+type: module
+description: 'Imports news from NewsAPI using WSData.'
+core_version_requirement: '>=10.0'
+package: Custom
+dependencies:
+  - drupal:wsdata

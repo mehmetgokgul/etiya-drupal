@@ -1,0 +1,15 @@
+<?php
+
+use Drupal\news_importer\Service\NewsImportService;
+
+/**
+ * Implements hook_cron().
+ */
+function news_importer_cron() {
+  \Drupal::logger('news_import')->notice('Cron başlatıldı.');
+
+  $importer = \Drupal::service('news_importer.news_import_service');
+  $count = $importer->importNews();
+
+  \Drupal::logger('news_import')->notice("Cron ile {$count} haber import edildi.");
+}
