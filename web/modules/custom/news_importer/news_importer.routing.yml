@@ -1,0 +1,7 @@
+news_importer.import_form:
+  path: '/import-news'
+  defaults:
+    _form: '\Drupal\news_importer\Form\NewsImportForm'
+    _title: 'Import News'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,4 @@
+services:
+  news_importer.news_import_service:
+    class: Drupal\news_importer\Service\NewsImportService
+    arguments: ['@wsdata']
