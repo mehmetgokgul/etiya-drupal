@@ -1,0 +1,21 @@
+uuid: fcdeb900-e8af-465b-89e4-921c46b1a88e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_storage
+field_name: field_storage
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 64
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

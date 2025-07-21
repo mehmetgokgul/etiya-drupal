@@ -1,0 +1,18 @@
+uuid: ea1b6cef-9867-42a1-9b17-e89aba26d384
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_audio_jack
+field_name: field_audio_jack
+entity_type: commerce_product
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

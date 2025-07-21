@@ -1,0 +1,181 @@
+uuid: c69c77f0-f536-46bb-b466-1588c8342df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.phone
+    - field.field.commerce_product.phone.field_audio_jack
+    - field.field.commerce_product.phone.field_brand
+    - field.field.commerce_product.phone.field_build_material
+    - field.field.commerce_product.phone.field_charging_port
+    - field.field.commerce_product.phone.field_dual_sim
+    - field.field.commerce_product.phone.field_face_id
+    - field.field.commerce_product.phone.field_fast_charging
+    - field.field.commerce_product.phone.field_fingerprint_sensor
+    - field.field.commerce_product.phone.field_ip_rating
+    - field.field.commerce_product.phone.field_manufacturer_country
+    - field.field.commerce_product.phone.field_network_compatibility
+    - field.field.commerce_product.phone.field_release_year
+    - field.field.commerce_product.phone.field_screen_refresh_rate
+    - field.field.commerce_product.phone.field_warranty_period
+    - field.field.commerce_product.phone.field_wireless_charging
+  module:
+    - commerce_product
+id: commerce_product.phone.default
+targetEntityType: commerce_product
+bundle: phone
+mode: default
+content:
+  field_audio_jack:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_brand:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_build_material:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_charging_port:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_dual_sim:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_face_id:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_fast_charging:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_fingerprint_sensor:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_ip_rating:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_manufacturer_country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_network_compatibility:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_release_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_screen_refresh_rate:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_warranty_period:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_wireless_charging:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true

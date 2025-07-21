@@ -1,0 +1,21 @@
+uuid: 982b65c9-60a2-4197-8dff-5da0e58498f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.phone
+    - field.storage.commerce_product.field_dual_sim
+id: commerce_product.phone.field_dual_sim
+field_name: field_dual_sim
+entity_type: commerce_product
+bundle: phone
+label: 'Dual SIM'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

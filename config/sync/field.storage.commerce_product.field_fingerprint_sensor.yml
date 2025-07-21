@@ -1,0 +1,18 @@
+uuid: 880b7369-954a-4430-9068-2069676a9253
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_fingerprint_sensor
+field_name: field_fingerprint_sensor
+entity_type: commerce_product
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

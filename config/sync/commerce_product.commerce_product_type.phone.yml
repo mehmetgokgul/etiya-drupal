@@ -1,0 +1,14 @@
+uuid: ae03ca82-75c6-40c4-8924-c951493452b5
+langcode: en
+status: true
+dependencies: {  }
+id: phone
+label: Phone
+traits: {  }
+locked: false
+description: 'Product type for phone devices'
+variationType: phone
+variationTypes:
+  - phone
+multipleVariations: true
+injectVariationFields: true
