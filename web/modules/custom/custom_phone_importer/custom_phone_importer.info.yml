@@ -1,0 +1,7 @@
+name: 'Custom Phone Importer'
+type: module
+description: 'Provides admin interface for manual phone data import.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:commerce_product

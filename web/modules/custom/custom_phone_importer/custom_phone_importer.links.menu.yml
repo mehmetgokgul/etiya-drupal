@@ -1,0 +1,7 @@
+custom_phone_importer.import_menu_link:
+  title: 'Phone Import'
+  description: 'Manually import phone data'
+  route_name: custom_phone_importer.import_form
+  parent: commerce_product.admin_product
+  weight: 100
+  menu_name: admin
