@@ -10,19 +10,22 @@ use Drupal\commerce_product\Entity\ProductVariation;
 use Drupal\media\Entity\Media;
 use Drupal\Core\File\FileSystemInterface;
 
-class PhoneImportForm extends FormBase {
+class PhoneImportForm extends FormBase
+{
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormId()
+  {
     return 'phone_import_form';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state)
+  {
     $form['phone_json_file'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Phone JSON File'),
@@ -45,7 +48,8 @@ class PhoneImportForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state)
+  {
     $file_ids = $form_state->getValue('phone_json_file');
     if (!empty($file_ids[0]) && $file = File::load($file_ids[0])) {
       $file->setPermanent();
@@ -92,7 +96,7 @@ class PhoneImportForm extends FormBase {
 
         foreach ($item['variations'] as $var) {
           $variation = ProductVariation::create([
-            'type' => 'default',
+            'type' => 'phone',
             'sku' => $var['sku'],
             'price' => [
               'number' => $var['price'],
@@ -111,8 +115,9 @@ class PhoneImportForm extends FormBase {
 
           foreach ($var['images'] as $image_url) {
             try {
-              $image_data = file_get_contents($image_url);
-              if ($image_data) {
+              $image_data = @file_get_contents($image_url);
+
+              if ($image_data !== false) {
                 $filename = basename($image_url);
                 $uri = 'public://phone_imports/' . $filename;
 
@@ -125,28 +130,43 @@ class PhoneImportForm extends FormBase {
                   ]);
                   $file->save();
 
-                  $media = Media::create([
-                    'bundle' => 'image',
-                    'name' => $filename,
-                    'field_media_image' => [
-                      'target_id' => $file->id(),
-                      'alt' => $var['sku'],
-                    ],
-                    'status' => 1,
-                  ]);
-                  $media->save();
+                  if ($file->id()) {
+                    $media = Media::create([
+                      'bundle' => 'image',
+                      'name' => $filename,
+                      'field_media_image' => [
+                        'target_id' => $file->id(),
+                        'alt' => $var['sku'],
+                      ],
+                      'status' => 1,
+                    ]);
+                    $media->save();
 
-                  $image_ids[] = ['target_id' => $media->id()];
+                    if ($media->id()) {
+                      $image_ids[] = ['target_id' => $media->id()];
+                    }
+                  }
                 }
               }
+
             } catch (\Exception $e) {
               \Drupal::logger('custom_phone_importer')->error('Image import failed: @message', ['@message' => $e->getMessage()]);
             }
           }
 
-          if (!empty($image_ids)) {
-            $variation->set('field_images', $image_ids);
+          $valid_image_ids = [];
+
+          foreach ($image_ids as $item) {
+            if (!empty($item['target_id']) && Media::load($item['target_id'])) {
+              $valid_image_ids[] = $item;
+            }
           }
+
+          if (!empty($valid_image_ids)) {
+            $variation->set('field_images', $valid_image_ids);
+          }
+
+
 
           $variation->save();
           $product->addVariation($variation);
@@ -156,8 +176,7 @@ class PhoneImportForm extends FormBase {
       }
 
       $this->messenger()->addStatus($this->t('All phone products have been successfully imported.'));
-    }
-    else {
+    } else {
       $this->messenger()->addError($this->t('File could not be loaded.'));
     }
   }
