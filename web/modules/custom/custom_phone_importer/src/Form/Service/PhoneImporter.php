@@ -1,0 +1,53 @@
+<?php
+
+namespace Drupal\custom_phone_importer\Service;
+
+use Drupal\Core\State\StateInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Psr\Log\LoggerInterface;
+use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+
+class PhoneImporter {
+
+  protected StateInterface $state;
+  protected ConfigFactoryInterface $configFactory;
+  protected LoggerInterface $logger;
+
+
+
+public function __construct(
+  StateInterface $state,
+  ConfigFactoryInterface $config_factory,
+  LoggerChannelFactoryInterface $logger_factory
+) {
+  $this->state = $state;
+  $this->configFactory = $config_factory;
+  $this->logger = $logger_factory->get('custom_phone_importer');
+}
+
+
+  /**
+   * Run the import process.
+   */
+  public function run(): string {
+    $file_path = $this->state->get('custom_phone_importer.file_path');
+
+    if (empty($file_path) || !file_exists($file_path)) {
+      $this->logger->warning('No import file found or file is missing.');
+      return 'No file to import.';
+    }
+
+    $json_content = file_get_contents($file_path);
+    $data = json_decode($json_content, TRUE);
+
+    if (json_last_error() !== JSON_ERROR_NONE || empty($data)) {
+      $this->logger->error('Invalid JSON file at @path', ['@path' => $file_path]);
+      return 'Invalid or empty JSON.';
+    }
+
+    $this->logger->notice('Import file found: @path', ['@path' => $file_path]);
+
+    return 'File loaded successfully. Ready to process.';
+  }
+
+}
