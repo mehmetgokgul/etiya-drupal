@@ -1,0 +1,6 @@
+services:
+  Drupal\custom_phone_importer\Commands\PhoneImportCommands:
+    arguments:
+      - '@custom_phone_importer.importer'
+    tags:
+      - { name: drush.command }

@@ -16,9 +16,11 @@ use Drupal\Core\File\FileSystemInterface;
  *   cron = {"time" = 60}
  * )
  */
-class PhoneImportQueueWorker extends QueueWorkerBase {
+class PhoneImportQueueWorker extends QueueWorkerBase
+{
 
-  public function processItem($data) {
+  public function processItem($data)
+  {
     try {
       // Product
       $product = Product::create([
@@ -63,11 +65,6 @@ class PhoneImportQueueWorker extends QueueWorkerBase {
           'status' => $data['variation_status'],
         ]);
 
-        // Image/media field 
-        $media_references = $this->createMediaReferences($var['images'] ?? []);
-        if (!empty($media_references)) {
-          $variation->set('field_images', $media_references);
-        }
 
         $variation->save();
         $product->addVariation($variation);
@@ -78,17 +75,15 @@ class PhoneImportQueueWorker extends QueueWorkerBase {
       \Drupal::logger('custom_phone_importer')->notice('Queued import completed for: @title', [
         '@title' => $data['product_name'],
       ]);
-    }
-    catch (\Exception $e) {
+    } catch (\Exception $e) {
       \Drupal::logger('custom_phone_importer')->error('Queued import FAILED for: @title. Error: @msg', [
         '@title' => $data['product_name'],
         '@msg' => $e->getMessage(),
       ]);
     }
   }
-
-
-  private function createMediaReferences(array $image_urls): array {
+  private function createMediaReferences(array $image_urls): array
+  {
     $media_ids = [];
     $file_system = \Drupal::service('file_system');
 
@@ -124,9 +119,13 @@ class PhoneImportQueueWorker extends QueueWorkerBase {
         ]);
         $media->save();
 
-        $media_ids[] = ['target_id' => $media->id()];
-      }
-      catch (\Exception $e) {
+        if ($media && $media->id()) {
+          $media_ids[] = ['target_id' => $media->id()];
+        } else {
+          \Drupal::logger('custom_phone_importer')->warning('Media entity could not be created for file: @file', ['@file' => $filename]);
+        }
+
+      } catch (\Exception $e) {
         \Drupal::logger('custom_phone_importer')->error('Media import failed: @msg', [
           '@msg' => $e->getMessage(),
         ]);
