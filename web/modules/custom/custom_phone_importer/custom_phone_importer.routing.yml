@@ -1,0 +1,24 @@
+custom_phone_importer.import_form:
+  path: '/admin/commerce/phone-import'
+  defaults:
+    _form: '\Drupal\custom_phone_importer\Form\PhoneImportForm'
+    _title: 'Manual Phone Import'
+  requirements:
+    _permission: 'access administration pages'
+
+custom_phone_importer.import_settings:
+  path: '/admin/commerce/phone-import/settings'
+  defaults:
+    _form: '\Drupal\custom_phone_importer\Form\ImportSettingsForm'
+    _title: 'Import Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+phone_import_form:
+  path: '/admin/commerce/phone-import'
+  defaults:
+    _form: '\Drupal\custom_phone_importer\Form\PhoneImportForm'
+    _title: 'Phone Import'
+  requirements:
+    _permission: 'administer site configuration'

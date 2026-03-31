@@ -1,0 +1,14 @@
+uuid: b497d8ea-6434-4bc4-8422-50bf4b0dccac
+langcode: en
+status: {  }
+dependencies: {  }
+id: newsapicall
+label: NewsAPICall
+wsserver: newsapi
+wsdecoder: custom_news_decoder
+wsencoder: WSEncoderString
+options:
+  newsapi:
+    path: 'top-headlines?country=us&apiKey=194d42921b824566b554cfc2ccfa02a6'
+    method: get
+    expires: '1'

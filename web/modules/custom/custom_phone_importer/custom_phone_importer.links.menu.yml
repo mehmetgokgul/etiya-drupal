@@ -1,0 +1,22 @@
+custom_phone_importer.import_menu_link:
+  title: 'Phone Import'
+  description: 'Manually import phone data'
+  route_name: custom_phone_importer.import_form
+  parent: commerce_product.admin_product
+  weight: 100
+  menu_name: admin
+
+custom_phone_importer.import_settings:
+  title: 'Import Settings'
+  route_name: custom_phone_importer.import_settings
+  parent: commerce_product.admin_product
+  menu_name: admin
+  weight: 11
+
+
+custom_phone_importer.phone_import:
+  title: 'Manual Phone Import'
+  route_name: phone_import_form
+  parent: commerce.admin
+  description: 'Manually import phone data'
+  weight: 100

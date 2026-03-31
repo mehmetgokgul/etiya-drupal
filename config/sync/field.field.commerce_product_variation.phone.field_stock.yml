@@ -1,0 +1,23 @@
+uuid: 6ccc9bfe-746f-4e8f-8ca4-cabb8230d2e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.phone
+    - field.storage.commerce_product_variation.field_stock
+id: commerce_product_variation.phone.field_stock
+field_name: field_stock
+entity_type: commerce_product_variation
+bundle: phone
+label: Stock
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

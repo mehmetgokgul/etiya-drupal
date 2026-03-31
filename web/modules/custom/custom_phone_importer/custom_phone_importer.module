@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+function custom_phone_importer_cron() {
+  $importer = \Drupal::service('custom_phone_importer.importer');
+  $result = $importer->run();
+
+  // Optional: log the result
+  \Drupal::logger('custom_phone_importer')->info('Cron import result: @msg', ['@msg' => $result]);
+}

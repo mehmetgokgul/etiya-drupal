@@ -1,0 +1,9 @@
+uuid: e8e8c62f-f262-4a47-9363-d9e7555e87b3
+langcode: en
+status: true
+dependencies: {  }
+id: newsapi
+label: NewsAPI
+endpoint: 'https://newsapi.org/v2/'
+wsconnector: WSConnectorSimpleHTTP
+settings: null

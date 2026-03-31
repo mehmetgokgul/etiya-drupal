@@ -1,0 +1,21 @@
+uuid: 0eb2da0f-3b47-4727-a46e-2ca9d6561aee
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.phone
+    - field.storage.commerce_product.field_audio_jack
+id: commerce_product.phone.field_audio_jack
+field_name: field_audio_jack
+entity_type: commerce_product
+bundle: phone
+label: "Audio Jack\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
